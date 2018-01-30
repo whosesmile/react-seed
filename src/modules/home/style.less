@@ -1,0 +1,80 @@
+@import "../../less/base/fn.less";
+
+:local(.home) {
+  background-color: #f2f2f2;
+
+  aside {
+    position: fixed !important;
+    left: 0;
+    top: 50px;
+    bottom: 58px;
+    width: 90px;
+    font-size: 14px;
+    text-align: center;
+    transform: translate3d(0, 0, 0);
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    border-right: 1px solid #eee;
+
+    &.nested {
+      top: 0;
+    }
+
+    .item {
+      position: relative;
+      display: block;
+      line-height: 52px;
+      .ellipsis();
+
+      &.active {
+        &:before {
+          .borderLeft();
+          border-width: 4px;
+          border-color: #fda413;
+        }
+
+        color: #fda413;
+        background-color: #fff;
+      }
+
+    }
+
+  }
+
+  .groups {
+    display: block;
+    margin-left: 90px;
+    background-color: #fff;
+
+    h4 {
+      padding: 0 15px;
+      line-height: 52px;
+    }
+
+    .items {
+      .clearfix();
+      overflow: hidden;
+
+      .item {
+        float: left;
+        width: 33.33333%;
+        text-align: center;
+        margin-bottom: 20px;
+
+        &:active {
+          opacity: 0.8;
+        }
+
+        img {
+          border-radius: 50%;
+          display: block;
+          margin: 0 auto 5px;
+        }
+
+      }
+
+    }
+
+  }
+
+}

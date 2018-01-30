@@ -1,0 +1,48 @@
+@import './keyframes.less';
+
+// // // // // // // // // 左侧进左侧出 // // // // // // // // // //
+
+.ex-move-ltr-enter {
+  z-index: 200;
+  animation: moveltc .3s ease-out both;
+}
+
+.ex-move-ltr-exit {
+  z-index: 100;
+  // animation: movectl .3s ease-out both;
+  animation: scaledw .3s ease-out both;
+}
+
+// // // // // // // // // 右侧进右侧出 // // // // // // // // // //
+
+.ex-move-rtl-enter {
+  z-index: 200;
+  animation: movertc .3s ease-out both;
+}
+
+.ex-move-rtl-exit {
+  z-index: 100;
+  // animation: movectr .3s ease-out both;
+  animation: scaledw .3s ease-out both;
+}
+
+// // // // // // // // // 底部进顶部出 // // // // // // // // // //
+
+
+.ex-move-btt-enter {
+  animation: movebtm .3s ease-out both;
+}
+
+.ex-move-btt-exit {
+  animation: movemtt .3s ease-out both;
+}
+
+// // // // // // // // // 顶部进底部出 // // // // // // // // // //
+
+.ex-move-ttb-enter {
+  animation: movettm .3s ease-out both;
+}
+
+.ex-move-ttb-exit {
+  animation: movemtb .3s ease-out both;
+}

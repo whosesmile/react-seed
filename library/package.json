@@ -1,0 +1,6 @@
+{
+  "name": "react-library",
+  "main": "components/index.jsx",
+  "author": "whosesmile <whosesmile@gmail.com> (https://github.com/whosesmile)",
+  "license": "ISC"
+}

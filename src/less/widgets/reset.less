@@ -1,0 +1,62 @@
+html, body {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  touch-action: manipulation;
+  word-wrap: break-word;
+  text-size-adjust: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -ms-content-zooming: none;
+}
+
+#root, #app, #main, #main .view {
+  .absper();
+}
+
+#main > .bundle {
+  .absper();
+  transform: translate3d(0, 0, 0);
+}
+
+#main .view {
+  background-color: #f2f2f2;
+  transform: translate3d(0, 0, 0);
+
+  & > .content {
+    .absper();
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    transform: translate3d(0, 0, 0);
+
+    // 3d加速模式 会导致fixed定位失效 coord模式关闭加速
+    &.coord {
+      transform: none;
+    }
+
+  }
+
+}
+
+a {
+  -webkit-touch-callout: none;
+}
+
+.addrbar {
+  background: #fff url(//img1.qdingnet.com/e200d887fa968c85be60a262218dadb8.png?imageslim) center 0 repeat-x;
+  background-size: auto 2px;
+}
+
+.popup.coupon h3 {
+  font-size: 40px;
+  min-width: 50px;
+  margin-right: 12px;
+  text-align: center;
+}

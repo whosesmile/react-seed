@@ -1,0 +1,38 @@
+// mixin:clearfix
+.clearfix() {
+  &:after {
+    content: '\0200';
+    visibility: hidden;
+    clear: both;
+    display: block;
+    font-size: 0;
+    height: 0;
+  }
+
+}
+
+// mixin:placeholder
+.autofix() {
+  position: relative;
+  display: block;
+  overflow: hidden;
+
+  & > img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+  }
+
+}
+
+// absolute 100% layout
+.absper() {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+}

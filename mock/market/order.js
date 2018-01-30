@@ -1,0 +1,77 @@
+// 获取物流信息
+var faker = require('faker')
+module.exports = function() {
+    return {
+        code: 200,
+        data: {
+            entity: {
+                createAt: 1510567996876,
+                orderCode: "MS21321321323434343",
+                orderStatus: 1,
+                orderStatusName: "未支付",
+                shopName: "物美超市",
+                detailSmarketOrderProductBeanList: [{
+                    subOrderCode: "MS1111",
+                    id: "01",
+                    img: "https://img1.qdingnet.com/image-4ce6f4da-d5fa-467d-9892-87bf7472581a.png",
+                    isShowSalesReturnBut: true,
+                    skuId: "2233",
+                    title: "金樽清酒",
+                    skuName: "袋装",
+                    skuPrice: "200",
+                    num: 2,
+                }, {
+                    subOrderCode: "MS2222",
+                    id: "01",
+                    img: "https://img1.qdingnet.com/image-4ce6f4da-d5fa-467d-9892-87bf7472581a.png",
+                    isShowSalesReturnBut: true,
+                    skuId: "2233",
+                    title: "牛肉干",
+                    skuName: "袋装",
+                    skuPrice: "200",
+                    num: 2,
+                }, {
+                    subOrderCode: "MS333",
+                    id: "01",
+                    img: "https://img1.qdingnet.com/image-4ce6f4da-d5fa-467d-9892-87bf7472581a.png",
+                    isShowSalesReturnBut: true,
+                    skuId: "2233",
+                    title: "马奶酒",
+                    skuName: "袋装",
+                    skuPrice: "200",
+                    num: 2,
+                }],
+                totalDiscountPrice: 3,
+                totalPrice: 259,
+                totalRealPrice: 256,
+                totalShouldPrice: 290,
+                payType: 31,
+                orderRemark: "你是我的小苹果",
+                isShowCancelOrderBut: true,
+                isShowPayMoneyBut: true,
+                promotionList: [{
+                    orderCode: "111",
+                    subOrderCode: "222",
+                    promotionId: "112",
+                    promotionName: "千丁啊啊啊",
+                    discount: "21",
+                    totalCouponPrice: 2333,
+                    type: 3,
+                }, {
+                    orderCode: "111",
+                    subOrderCode: "222",
+                    promotionId: "112",
+                    promotionName: "千丁啊啊啊",
+                    discount: "21",
+                    totalCouponPrice: 2333,
+                    type: 3,
+                }, ],
+                memberAddressMobile: "180********",
+                memberAddress: "北京市天安门-人民大会堂",
+                memberAddressName: "毛爷爷",
+            },
+            message: "没毛病",
+            toast: "aaa",
+        }
+    };
+}
