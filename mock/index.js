@@ -60,5 +60,5 @@ app.listen(port, function() {
 
 // 每3分钟自动更新
 setInterval(function() {
-  child_process.exec('git pull', { cwd: '/data/exui/' });
+  child_process.exec('git pull', { cwd: '/data/exui/exui/' });
 }, 180000);
