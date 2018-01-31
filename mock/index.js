@@ -1,6 +1,7 @@
 var Koa = require('koa');
 var path = require('path');
 var colors = require('colors/safe');
+var child_process = require('child_process');
 
 var port = 3000;
 var mills = 300;
@@ -9,7 +10,7 @@ var mills = 300;
 var app = module.exports = new Koa();
 
 // favicon
-app.use(async(ctx, next) => {
+app.use(async (ctx, next) => {
   if (ctx.path === '/favicon.ico') {
     return ctx.body = null;
   } else {
@@ -18,7 +19,7 @@ app.use(async(ctx, next) => {
 });
 
 // 模拟延迟
-app.use(async(ctx, next) => {
+app.use(async (ctx, next) => {
   let match = ctx.path.match(/\/delay\/ajax\/(\d+)/);
   if (match && match[1]) {
 
@@ -36,7 +37,7 @@ app.use(async(ctx, next) => {
 });
 
 // 模拟生产环境，接口延迟一定时间再返回
-app.use(async(ctx, next) => {
+app.use(async (ctx, next) => {
   var file = ctx.path.replace(/^\/(\w+)\/ajax(.*)/, './$1$2');
   delete require.cache[require.resolve(file)];
 
@@ -56,3 +57,8 @@ app.use(async(ctx, next) => {
 app.listen(port, function() {
   console.log(colors.cyan(`Mock server started on port: ${port}`));
 });
+
+// 每3分钟自动更新
+setInterval(function() {
+  child_process.exec('git pull', { cwd: '/data/exui/' });
+}, 180000);
