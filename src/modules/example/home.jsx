@@ -11,7 +11,7 @@ class Home extends Component {
           <a className="menu" onClick={() => this.props.history.go(-1)}>
             <i className="icon">&#xe60e;</i>
           </a>
-          <Title title="组件使用范例" />
+          <Title title="Exui component build with React & Redux" />
         </Header>
 
         <Content>
