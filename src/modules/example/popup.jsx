@@ -95,7 +95,7 @@ class PopupExample extends Component {
               {Array(5).fill(1).map((item, idx) => (
                 <div key={idx} className="item" onClick={()=>closePopup('popupD')}>
                   <div className="text">北京欢迎你</div>
-                  <i className="icon">&#xe61a;</i>
+                  <i className="icon text-gray">&#xe61a;</i>
                 </div>
               ))}
             </div>

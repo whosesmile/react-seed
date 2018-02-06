@@ -7,12 +7,12 @@ module.exports = function() {
       "baseToken": "v1_UU5LQm56KzdLYnJrZWs4Nk55T0FNSHE1SHo5QUhZZnJBVGRpSHh4Z2Zqb3BoUW54M1dhbDBPUmFxNGh0dzNPVmdWVlBFZUxEbGRVbXFGOG9KTURZOW15RXJYY3NySlJXSUYzdy9JNUEraFRhdU9rZXpNbSs4M290YVYxcHlmZEZYeWRLUkMvbzZaUGFFTW1Na213R0FQYlZ4WFJJejNIR3F6WUVHMEFzSmo4cG1hc1MvY0dPYmY2MUs3dHorc0ZuamRYV3BJdVR1UHE5WE1HbW5WVnpDQ3pOUUw2WjJYdVE5TGtrSnMyQUhGNkZPQVJkTi9jTGpWNDZnWndmK29xS0FUUHVnY1dHb2p1VEtSaldnU2VnL005UUxPelB0ZUlyanlZTWJxTyttVHN3MTF4Y3lqd2dtU0M3RCtpdGVZWXhrN9nrkJ6rq4Y-KkkKs8RuxLC_p8aHfLrFRsUVlEBR6-DOQkdfcseUeKxM6OV6h2bbY_1IzzwlpEIIDl9I1RtswI7CSyD2zlUE5H1BmuaVC9q7MHMnp0pRds36nrDNLn5RzRA6UhUfxxjk1lq4KCPqEsb49WiWFUbfHi9V1-gvrw..",
       "entity": {
         "account": {
-          "availableAmount": "5203.35",
+          "availableAmount": faker.random.number(300),
           "depositAmount": "2755.63",
           "expenditureAmount": "4392.55"
         },
-        "accountIntegral": 702974114,
-        "accountQdTicket": 23,
+        "accountIntegral": faker.random.number(1000),
+        "accountQdTicket": faker.random.number(100),
         "giftEntity": null,
         "memberId": "ff8080814d7a5e08014d7ad044370022",
         "slogan": [

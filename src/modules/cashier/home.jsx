@@ -246,11 +246,9 @@ class Home extends Component {
         title: '请输入支付密码',
         message: (
           <div className="list compact wallet">
-            <label className="item">
+            <label className="item" ui-mode="input">
               <span className="label">密码</span>
-              <div className="text">
-                <input className="input" type="password" pattern="[0-9]*" placeholder="请输入您的支付密码" maxLength="6" onChange={ e => password=e.target.value } />
-              </div>
+              <input className="input" type="password" pattern="[0-9]*" placeholder="请输入您的支付密码" maxLength="6" onChange={ e => password=e.target.value } />
             </label>
             <div className="item-divider">
               <div className="text text-center text-driving">提醒: 您正在进行付款操作</div>

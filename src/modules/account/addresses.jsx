@@ -98,7 +98,7 @@ class Addresses extends Component {
             </p>
             <div className="brief text-ellipsis">{ item.addressStr }</div>
           </div>
-          <i className="icon">&#xe61a;</i>
+          <i className="icon text-gray">&#xe61a;</i>
         </BLink>
         <div className="item">
           <label className="text text-sm text-darkgray">

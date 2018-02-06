@@ -11,6 +11,7 @@ var app = module.exports = new Koa();
 
 // favicon
 app.use(async (ctx, next) => {
+  ctx.set('X-Powered-By', 'koa mock server|^_^');
   if (ctx.path === '/favicon.ico') {
     return ctx.body = null;
   } else {

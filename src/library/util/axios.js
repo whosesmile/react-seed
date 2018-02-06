@@ -1,7 +1,7 @@
 import axios from 'axios';
 import Cache from './cache';
 import Env from './env';
-import store, { actions } from '../../src/redux';
+import store, { actions } from '../../redux';
 
 const cache = new Cache();
 

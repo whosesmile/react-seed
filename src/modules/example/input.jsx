@@ -27,7 +27,8 @@ class InputExample extends Component {
 
         <Content>
           <div className="list compact">
-            <div className="item">
+            <div className="item" ui-mode="input">
+              <i className="icon text-darkgray">&#xe60a;</i>
               <Input name="text" placeholder="试试输入文字" value={this.state.input } onChange={this.handleChange} />
             </div>
           </div>

@@ -3,6 +3,7 @@
  */
 import React, { Component } from 'react';
 import classnames from 'classnames';
+import Aux from './aux';
 
 export default class Input extends Component {
 
@@ -39,10 +40,10 @@ export default class Input extends Component {
     let clazz = classnames('input', className);
 
     return (
-      <div className="input-widget">
+      <Aux>
         <input ref={input => this.input = input} className={ clazz } { ...others } required />
-        <i className="icon text-gray" onClick={ this.clear }>&#xe61d;</i>
-      </div>
+        <i className="icon text-light" ui-mode="close" onClick={ this.clear }>&#xe6a0;</i>
+      </Aux>
     );
   }
 }

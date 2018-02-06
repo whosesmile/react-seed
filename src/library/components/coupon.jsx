@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import Popup, { PopupHeader } from './popup';
 import { Filter, Emitter } from '../util';
-import { actions } from '../../src/redux';
+import { actions } from '../../redux';
 
 // 使用事件机制 来实现跨组件通信
 const carry = new Emitter();
@@ -147,7 +147,7 @@ class Coupon extends Component {
     if (!list) {
       return (
         <div className="content">
-          <div className="loadmore">
+          <div className="loadmore" ui-mode="compact">
             <i className="loading" />
             <span className="tips text-gray">正在加载</span>
           </div>
@@ -223,7 +223,7 @@ class Indicator extends Component {
     // 正在刷新券
     else if (!list) {
       return (
-        <div className="loadmore">
+        <div className="loadmore" ui-mode="compact">
           <i className="loading" />
         </div>
       );

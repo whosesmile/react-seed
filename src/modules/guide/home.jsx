@@ -18,15 +18,15 @@ class Home extends Component {
           <div className="list compact overlap">
             <BLink className="item" to="/guide/staff">
               <div className="text">我的客服</div>
-              <i className="icon">&#xe61a;</i>
+              <i className="icon text-gray">&#xe61a;</i>
             </BLink>
             <BLink className="item" to="/guide/parcels">
               <div className="text">我的包裹</div>
-              <i className="icon">&#xe61a;</i>
+              <i className="icon text-gray">&#xe61a;</i>
             </BLink>
             <BLink className="item" to="/guide/records">
               <div className="text">评价服务</div>
-              <i className="icon">&#xe61a;</i>
+              <i className="icon text-gray">&#xe61a;</i>
             </BLink>
           </div>
         </Content>

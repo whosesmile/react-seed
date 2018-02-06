@@ -67,17 +67,23 @@ class Home extends Component {
               <i className="icon text-gray">&#xe61a;</i>
             </a>
             <div className="item thread split text-sm" ui-mode="10px 0px">
-              <a className="text text-dark text-center" href="/wallet/records">
-                <p>{ Filter.currency(wallet ? wallet.account.availableAmount : 0, 2) }</p>
-                <p>账户余额</p>
+              <a className="text text-dark" href="/wallet/records">
+                <div>
+                  <p>{ Filter.currency(wallet ? wallet.account.availableAmount : 0, 2) }</p>
+                  <p>账户余额</p>
+                </div>
               </a>
               <BLink className="text text-dark text-center" to="/integral">
-                <p>{ wallet ? wallet.accountIntegral : 0 }</p>
-                <p>我的积分</p>
+                <div>
+                  <p>{ wallet ? wallet.accountIntegral : 0 }</p>
+                  <p>我的积分</p>
+                </div>
               </BLink>
               <BLink className="text text-dark text-center" to="/account/coupons">
-                <p>{ Filter.currency(wallet ? wallet.accountQdTicket : 0, 2) }</p>
-                <p>千丁券</p>
+                <div>
+                  <p>{ Filter.currency(wallet ? wallet.accountQdTicket : 0, 2) }</p>
+                  <p>千丁券</p>
+                </div>
               </BLink>
             </div>
           </div>

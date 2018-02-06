@@ -339,7 +339,7 @@ class Address extends Component {
     }
 
     // 重置社区名称和房屋名称
-    let address = {...this.props.address };
+    let address = { ...this.props.address };
     if (address.projectId === 0) {
       delete address.projectId;
       delete address.projectName;
@@ -421,11 +421,11 @@ class Address extends Component {
 
         <Content>
           <div className="list compact overlap">
-            <label className="item">
+            <label className="item" ui-mode="input">
               <span className="label">姓名</span>
               <Input className="input" type="text" placeholder="联系人姓名" name="name" value={ address.name || '' } maxLength="20" onChange={ this.updateBasic } />
             </label>
-            <label className="item">
+            <label className="item" ui-mode="input">
               <span className="label">手机</span>
               <Input className="input" type="tel" pattern="[0-9]*" placeholder="联系人手机" name="mobile" value={ address.mobile || '' } maxLength="11" onChange={ this.updateBasic } />
             </label>
@@ -486,11 +486,9 @@ class Address extends Component {
               </div>
             }
             {!address.roomId &&
-              <div className="item">
-                <div className="text">
-                  <textarea className="textarea" rows="3" placeholder="请填写详细地址" name="address" maxLength={ 100 } value={ address.address || '' } onChange={ this.updateBasic } />
-                  <div className="textarea-counter"><span>{ (address.address || '').length }</span>/100</div>
-                </div>
+              <div className="item" ui-mode="input">
+                <textarea className="textarea" rows="3" placeholder="请填写详细地址" name="address" maxLength={ 100 } value={ address.address || '' } onChange={ this.updateBasic } />
+                <div className="textarea-counter"><span>{ (address.address || '').length }</span>/100</div>
               </div>
             }
           </div>

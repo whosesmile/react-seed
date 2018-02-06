@@ -108,11 +108,9 @@ class Coupons extends Component {
             title: '添加千丁券',
             message: (
               <div className="list compact form">
-                <label className="item">
+                <label className="item" ui-mode="input">
                   <span className="label text-right" ui-mode="48px">编号</span>
-                  <div className="text">
-                    <input className="input" placeholder="请输入您的券编号" maxLength="50" value={this.state.code} onChange={this.handleChange} />
-                  </div>
+                  <input className="input" placeholder="请输入您的券编号" maxLength="50" value={this.state.code} onChange={this.handleChange} />
                 </label>
               </div>
             ),

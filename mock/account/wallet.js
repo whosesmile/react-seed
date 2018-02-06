@@ -7,12 +7,12 @@ module.exports = function() {
       entity: {
         account: {
           availableAmount: '109.399',
-          depositAmount: faker.random.number(),
+          depositAmount: faker.random.number(1000),
           expenditureAmount: faker.random.number(),
         },
-        accountIntegral: faker.random.number(),
-        accountQdTicket: faker.random.number(),
-        memberId: faker.random.number(),
+        accountIntegral: faker.random.number(1000),
+        accountQdTicket: faker.random.number(1000),
+        memberId: faker.random.number(1000),
         slogan: [],
         sloganDetail: '预存款不能缴水、 电、 燃气费用； 账户充值上限为4999元',
         walletStatus: {

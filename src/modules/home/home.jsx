@@ -18,14 +18,15 @@ class Home extends Component {
   }
 
   componentDidMount() {
-    this.props.actions.services();
+    if (this.props.list.length === 0)
+      this.props.actions.services();
     this.panel.addEventListener('scroll', this.handleScroll);
   }
 
   componentWillUnmount() {
     this.panel.removeEventListener('scroll', this.handleScroll);
     // 清空对应的store数据
-    this.props.destroy();
+    // this.props.destroy();
   }
 
   switchTab(index) {
@@ -112,7 +113,7 @@ class Home extends Component {
         </Content>
 
         <Footer>
-          <TabBar type="services" />
+          <TabBar type="home" />
         </Footer>
       </View>
     );

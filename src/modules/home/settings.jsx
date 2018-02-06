@@ -25,24 +25,19 @@ class Settings extends Component {
           <Title title="设置" />
         </Header>
         <Content>
-          <div className="list">
-            <BLink className="item" to="/">
-              <span className="text">PUSH</span>
-              <i className="extra">HOME</i>
-              <i className="icon">&#xe61a;</i>
-            </BLink>
-            <BLink className="item" to="/" replace>
-              <span className="text">REPLACE</span>
-              <i className="extra">HOME</i>
-              <i className="icon">&#xe61a;</i>
+          <div className="list compact overlap">
+            <BLink className="item" to="/account/orders">
+              <span className="text">我的订单</span>
+              <span className="extra">异步载入子模块</span>
+              <i className="icon text-gray">&#xe61a;</i>
             </BLink>
           </div>
 
           <div className="list">
             <BLink className="item" to="/example">
               <span className="text">组件使用范例</span>
-              <i className="extra">EXAMPLE</i>
-              <i className="icon">&#xe61a;</i>
+              <span className="extra">异步载入子模块</span>
+              <i className="icon text-gray">&#xe61a;</i>
             </BLink>
           </div>
 
@@ -78,27 +73,15 @@ class Settings extends Component {
           }
         </Content>
         <Footer>
-          <div className="lace">
-            <div className="cell">
-              <i className="icon">
-                <img width="24" height="24" src="//img1.qdingnet.com/728ae837b248f318757bb47eddadf622.png" />
-              </i>
-              <span className="label">客服</span>
-            </div>
+          <div className="cell">
+            <img width="24" height="24" src="//img1.qdingnet.com/728ae837b248f318757bb47eddadf622.png" />
           </div>
-          <div className="lace">
-            <div className="cell">
-              <i className="icon">
-                <img width="24" height="24" src="//img1.qdingnet.com/705aed821745754bc94eab423f40fb4c.png" />
-              </i>
-              <span className="label">购物车</span>
-            </div>
+          <div className="cell">
+            <img width="24" height="24" src="//img1.qdingnet.com/705aed821745754bc94eab423f40fb4c.png" />
           </div>
-          <div className="text">
-            <div className="button-group compact">
-              <button className="button guiding square text-sm">加入购物车</button>
-              <button className="button driving square text-sm">立即购买</button>
-            </div>
+          <div className="button-group compact">
+            <button className="button guiding square text-sm">加入购物车</button>
+            <button className="button driving square text-sm">立即购买</button>
           </div>
         </Footer>
       </View>

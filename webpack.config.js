@@ -8,12 +8,12 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 // 独立打包
-// const SCRIPT_FORMAT = '[name].[chunkhash].js';
-// const STYLES_FORMAT = '[name].[contenthash:20].css';
+const SCRIPT_FORMAT = '[name].[chunkhash].js';
+const STYLES_FORMAT = '[name].[contenthash:20].css';
 
 // 整合打包
-const SCRIPT_FORMAT = '[name].bundle.js';
-const STYLES_FORMAT = '[name].bundle.css';
+// const SCRIPT_FORMAT = '[name].bundle.js';
+// const STYLES_FORMAT = '[name].bundle.css';
 
 module.exports = function(env, args) {
   env = env || process.env.NODE_ENV;
@@ -88,7 +88,7 @@ module.exports = function(env, args) {
     resolve: {
       extensions: ['.js', '.jsx'],
       alias: {
-        library: path.resolve(__dirname, 'library'),
+        library: path.resolve(__dirname, 'src/library'),
       },
     },
 
@@ -159,7 +159,7 @@ function Config(env) {
 
     // 动态计算的原因是为了确定动态加载脚本的路径
     get publicPath() {
-      return env === 'simulation' ? '/' : '/resources/redux/';
+      return env === 'simulation' ? '/' : '/';
     },
   };
 };

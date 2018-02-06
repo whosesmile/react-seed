@@ -40,11 +40,9 @@ class Settings extends Component {
       title: '修改昵称',
       message: (
         <div className="list compact form">
-          <label className="item">
+          <label className="item" ui-mode="input">
             <span className="label text-right" ui-mode="48px">昵称</span>
-            <div className="text">
-              <input ref={input => this.input = input} className="input" placeholder="请输入您的昵称" maxLength="20" defaultValue={member.memberName} />
-            </div>
+            <input ref={input => this.input = input} className="input" placeholder="请输入您的昵称" maxLength="20" defaultValue={member.memberName} />
           </label>
         </div>
       ),
@@ -86,11 +84,9 @@ class Settings extends Component {
       title: '修改个性签名',
       message: (
         <div className="list compact form">
-          <label className="item">
+          <label className="item" ui-mode="input">
             <span className="label text-right" ui-mode="48px">签名</span>
-            <div className="text">
-              <input ref={input => this.input = input} className="input" placeholder="最多36个字..." maxLength="36" defaultValue={member.memberSignature} />
-            </div>
+            <input ref={input => this.input = input} className="input" placeholder="最多36个字..." maxLength="36" defaultValue={member.memberSignature} />
           </label>
         </div>
       ),
@@ -155,19 +151,17 @@ class Settings extends Component {
               <span className="extra">{member.memberName}</span>
               <i className="icon text-gray">&#xe61a;</i>
             </div>
-            <label className="item">
+            <label className="item" ui-mode="input">
               <div className="avatar">
                 <img width="16" src="//img1.qdingnet.com/image-5b5bd99d-8ec9-480f-b124-9ab33284677e.png" />
               </div>
               <span className="label">性别</span>
-              <div className="text text-gray">
-                <select className="select" dir="rtl" defaultValue={member.memberGender} onChange={this.handleGender}>
-                  <option value="1">男</option>
-                  <option value="0">女</option>
-                  <option value="-1">保密</option>
-                </select>
-              </div>
-              <i className="icon text-gray">&#xe61a;</i>
+              <select className="select" dir="rtl" defaultValue={member.memberGender} onChange={this.handleGender}>
+                <option value="1">男</option>
+                <option value="0">女</option>
+                <option value="-1">保密</option>
+              </select>
+              <i className="icon text-gray" ui-mode="arrow">&#xe61a;</i>
             </label>
             <div className="item" onClick={this.handleSign}>
               <div className="avatar">

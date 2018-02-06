@@ -50,17 +50,13 @@ class ModalExample extends Component {
       title: '填写表单',
       message: (
         <div className="list">
-          <label className="item">
+          <label className="item" ui-mode="input">
             <span className="label">手机号</span>
-            <div className="text">
-              <input className="input" type="tel" pattern="[0-9]*" placeholder="请输入您的电话" />
-            </div>
+            <input className="input" type="tel" pattern="[0-9]*" placeholder="请输入您的电话" />
           </label>
-          <label className="item">
+          <label className="item" ui-mode="input">
             <span className="label">验证码</span>
-            <div className="text">
-              <input className="input" type="text" placeholder="请输入验证码" />
-            </div>
+            <input className="input" type="text" placeholder="请输入验证码" />
           </label>
         </div>
       ),

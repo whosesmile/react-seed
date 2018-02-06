@@ -48,17 +48,20 @@ class Content extends Component {
 
   adjustMargin(context) {
     let style = {};
+    const HBH = 44; // header bar height
+    const FBH = 48; // footer bar height
+    const TBH = 50; // tab bar height
     React.Children.forEach(context.elements, item => {
       if (item) {
         if (item.type === Header && !Env.nested) {
-          style.marginTop = 50;
+          style.marginTop = HBH;
         }
         if (item.type === Footer) {
           // 特殊处理TabBar 58px
           const hasTab = React.Children.toArray(item.props.children).find(item => {
             return item && item.type === TabBar;
           });
-          style.marginBottom = hasTab ? 58 : 50;
+          style.marginBottom = hasTab ? TBH : FBH;
         }
       }
     });

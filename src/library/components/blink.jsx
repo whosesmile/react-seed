@@ -43,15 +43,6 @@ class BLink extends Component {
     }
   }
 
-  // 重复地址不刷新
-  preventReload = (e) => {
-    const { to, reload } = this.props;
-    const { router } = this.context;
-    if (!reload && flatten(router.history.location) === flatten(to)) {
-      e.preventDefault();
-    }
-  }
-
   render() {
     const { to, skip, reload, children, replace, ...others } = this.props;
     // skip model
@@ -77,7 +68,7 @@ class BLink extends Component {
     // 默认
     else {
       return (
-        <Link to={flatten(to)} replace={replace} {...others} onClick={this.preventReload}>{children}</Link>
+        <Link to={flatten(to)} replace={replace} {...others}>{children}</Link>
       );
     }
   }
