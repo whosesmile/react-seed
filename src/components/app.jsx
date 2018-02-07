@@ -27,13 +27,15 @@ class App extends Component {
       direction: 'forward',
       // 从浏览器历史恢复，如果没有认定为首页
       key: history.state && history.state.key || null,
+      // 动画时长
+      timeout: { enter: 300, exit: 300 },
     };
 
     this.restore();
     this.subcribe();
   }
 
-  // 恢复数据
+  // 恢复location.key数据
   restore() {
     // 仅限浏览器环境
     if (Env.is('browser')) {
@@ -129,14 +131,43 @@ class App extends Component {
     });
   }
 
+  componentDidMount() {
+    let ts;
+    let tm;
+    const timeout = { enter: 300, exit: 300 };
+
+    document.addEventListener('touchstart', e => {
+      ts = tm = e.touches[0].screenX;
+    });
+
+    document.addEventListener('touchmove', e => {
+      tm = e.touches[0].screenX;
+    });
+
+    document.addEventListener('touchend', () => {
+      if (tm !== ts) {
+        // 停止动画
+        this.setState({ timeout: 0 });
+        // 恢复动画
+        this.timer = setTimeout(() => {
+          this.setState({ timeout });
+        }, 300);
+      }
+    });
+  }
+
+  componentWillUnMount() {
+    // 不需要移除事件 因为APP组件是单例
+    clearTimeout(this.timer);
+  }
+
   render() {
-    let timeout = { enter: 300, exit: 300 };
     let { location, background } = this.props;
-    let { effect, direction } = this.state;
+    let { effect, direction, timeout } = this.state;
 
     return (
       <Layout background={background}>
-        <TransitionGroup id="main">
+        <TransitionGroup id="main" enter={timeout !== 0} exit={timeout !== 0}>
           <CSSTransition classNames={effect[direction]} key={location.key} timeout={timeout}>
             <Switch location={location}>
               {

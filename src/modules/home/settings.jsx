@@ -41,6 +41,13 @@ class Settings extends Component {
             </BLink>
           </div>
 
+          <div className="list">
+            <BLink className="item" to="/drag">
+              <span className="text">拖拽测试</span>
+              <i className="icon text-gray">&#xe61a;</i>
+            </BLink>
+          </div>
+
           { list.map((item, idx) => (
               <div key={idx} className="list">
                 <div className="item">
