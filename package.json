@@ -43,7 +43,7 @@
     "koa": "^2.3.0",
     "less": "^2.7.2",
     "less-loader": "^4.0.5",
-    "postcss-loader": "^2.0.6",
+    "postcss-loader": "^2.1.0",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
