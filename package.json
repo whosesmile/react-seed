@@ -14,7 +14,7 @@
   "author": "whosesmile <whosesmile@gmail.com> (https://github.com/whosesmile)",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^7.1.4",
+    "autoprefixer": "^8.2.0",
     "axios": "^0.17.1",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
